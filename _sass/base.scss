@@ -1,7 +1,111 @@
 body {
-  background-color: #3c9762;
-  font-family: sans-serif;
-  margin: auto;
-  max-width: 70ch;
-  color: #000000;
+  background-color: #f4f6f8;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #222;
+}
+
+.timeline-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px rgba(60,151,98,0.08);
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 4px solid #3c9762;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -1.25rem;
+  top: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #3c9762;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #3c9762;
+}
+
+.timeline-event-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #3c9762;
+}
+
+.timeline-event-date {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-event-content {
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+}
+
+.sticky-note {
+  background: #fffbe7;
+  border: 2px solid #ffe066;
+  height: auto;
+  width: 250px;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  position: relative;
+  transform: rotate(-3deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 6px 12px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 50px;
+  height: 10px;
+  background: #ffe066;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-note .timeline-event-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #b8860b;
+  margin-bottom: 0.5rem;
+}
+
+.sticky-note .timeline-event-date {
+  font-size: 0.9rem;
+  color: #a68b00;
+  margin-bottom: 0.5rem;
+}
+
+.sticky-note .timeline-event-content {
+  font-size: 1rem;
+  color: #333;
 }
